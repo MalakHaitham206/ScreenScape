@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- swipper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Movie App</title>
+
+</head>
+
+<body>
+    <div class=" d-flex flex-row ">
+        <!-- <div class="row"> -->
+        <div class="side position-fixed d-flex ">
+            <div class="side-bar  mt-0 ">
+                <h1 class="m-3">Movie App</h1>
+                <div class="side-list mt-5 ms-4">
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-fire mt-1 me-2"></i>
+                        <p>Popular</p>
+                    </div>
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-arrow-trend-up mt-1 me-2"></i>
+                        <p>Trending</p>
+                    </div>
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-eye  mt-1 me-2"></i>
+                        <p>Most Viewed</p>
+                    </div>
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-calendar-days mt-1 me-2"></i>
+                        <p>Up Coming</p>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="list-pages mt-5 ms-4">
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-heart mt-1 me-2"></i>
+                        <p>Favourites</p>
+                    </div>
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-list mt-1 me-2"></i>
+                        <p>Watch List</p>
+                    </div>
+                </div>
+
+
+                <div class="logout mt-5 ms-4">
+                    <div class="list-link d-flex flex-row item">
+                        <i class="fa-solid fa-right-from-bracket mt-1 me-2"></i>
+                        <p>Log out</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- <div class="toggler d-flex align-items-center justify-content-center p-3">
+                <i class="fa-solid fa-bars toggle"></i>
+
+            </div> -->
+        </div>
+
+        <!-- main -->
+        <div class="main  ">
+
+            <!-- navbar -->
+            <div class="view ">
+                <div id="home" class="img-container">
+                    <img class="nav-img" src="./images/54b35fd37e3eeecc50e7b75ec51d4079.png" alt="">
+                </div>
+                <div class="nav-bar  container ">
+                    <nav class="navbar  navbar-expand-lg bg-body-transparent">
+                        <div class="container mt-2">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#trending">Trending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#popular">Popular</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#most">Most Viewed</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#up">Up Coming</a>
+                                    </li>
+
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2 search " type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <i class="fa-solid fa-magnifying-glass  sico mt-2"></i>
+                                </form>
+
+                                <div class="user d-flex flex-row mx-4">
+                                    <img class="user-img mx-2" src="./images/Profile_avatar_placeholder_large.png">
+                                    <p class="mt-2">User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+
+                <div class="main-container text-white">
+                    <p class="fs-3 m-0"><b>Harry Potter</b></p>
+                    <p>2004 | Mystery | 3 Season</p>
+                    <div class="btns">
+                        <button class="add-watch btn"><i class="fa-solid fa-plus"></i> Watch list</button>
+                        <button class="add-fav btn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="movie-show ps-4 container">
+                <div id="trending" class="trending pt-5 ">
+                    <h3>Trending</h3>
+
+                    <div id="carouselExampleDark" class="carousel carousel-light slide  my-5">
+
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/8a8dcdd8b7a1bdadf6bd5c2b77606c93.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/d79e141215507ce0f7bd3b1cb0fde695.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        
+    
+                                    </div>
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+                <div id="popular" class="popular pt-5">
+                    <h3>Popular</h3>
+
+                    <div id="carouselExampleDark" class="carousel carousel-light slide  my-5">
+
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        
+    
+                                    </div>
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+                <div id="most" class="most py-3">
+                    <h3>Most Viewed</h3>
+
+                    <div id="carouselExampleDark" class="carousel carousel-light slide  my-5">
+
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        
+    
+                                    </div>
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+                <div id="up" class="up-comming py-3">
+                    <h3>Up Comming</h3>
+
+                    <div id="carouselExampleDark" class="carousel carousel-light slide  my-5">
+
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card col-lg-3">
+                                        <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                            alt="...">
+                                            <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                        <div class="carousel-caption text-black text-center d-none d-md-block">
+                                            <h5 class="">First slide label</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row card-item gap-3 d-flex align-items-center justify-content-center ">
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card col-lg-3">
+                                            <img src="./images/7470df4538cae6f9886d680037e0b0ed.jpg" class="d-block w-100"
+                                                alt="...">
+                                                <button class="add-fav btn fav-card"><i class="fa-regular fa-heart"></i></button>
+
+                                            <div class="carousel-caption text-black text-center d-none d-md-block">
+                                                <h5 class="">First slide label</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        
+    
+                                    </div>
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./main.js  "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>
