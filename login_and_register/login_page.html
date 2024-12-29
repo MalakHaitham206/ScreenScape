@@ -22,18 +22,19 @@
 
         </div>
         <!-- Right section -->
-        <div class="right-section">
+        <div class="right-section d-flex">
             <h3 class="mb-4">Sign in</h3>
             <form>
+                <label>Email address</label>
                 <input type="email" class="form-control" placeholder="Email address">
-                <input type="password" class="form-control" placeholder="Password">
-                <div class="d-flex justify-content-between align-items-center mb-3"
-                    style="gap: 0.3rem; font-size: 0.8rem;">
-                    <span id="forgetPasswordText">Forgot password?</span><a href="#" style="font-weight: bold;"
-                        class="text-decoration-none text-light">Reset password</a>
+                <label>Password</label>
 
+                <input type="password" class="form-control mb-1" placeholder="Password">
+                <div class="forget-password-container">
+                    <span id="forgetPasswordText">Forgot password?</span>
+                    <a href="#" class="text-decoration-none text-light" style="font-weight: bold;">Reset password</a>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mb-3">Log in</button>
+                <button type="submit" class="btn btn-primary w-100" id="submitButton">Log in</button>
                 <div class=" d-flex col-11 justify-items-center  justify-content-center flex-column mx-auto mb-1">
                     <div class="divider-container">
                         <div class="divider">
