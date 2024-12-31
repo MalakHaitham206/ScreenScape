@@ -7,35 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+.main{
     background-color: var(--bg-color);
 }
-.search-place {
-    position: relative;
-    top: 100px;
-    text-align: center; 
-}
 
-.item a{
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 15px;
-}
-.item:hover{
-    font-size: 108%;
-    color: white;
-    cursor: pointer;
-}
-
-.search-place div {
-    display: inline-block; 
-    width: 500px;     
-    margin: 5px;           
-    padding: 10px;
-    /* border: 1px solid #ccc; */
-    box-sizing: border-box; 
-}
 /* side bar */
 .side-bar{
     background-color: var(--bg-color);
@@ -70,7 +45,13 @@ h1{
     bottom: -180px;
 }
 
-.side .item:hover{
+.item a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.item:hover{
     font-size: 108%;
     color: white;
     cursor: pointer;
@@ -80,9 +61,6 @@ h1{
 /* main */
 /* NAv */
 
-.main{
-    background-color: var(--bg-color);
-}
 
 .nav-bar{
     position: absolute;
@@ -214,26 +192,15 @@ h1{
     
 }
 
- .row>*{
+.carousel-item .row>*{
     padding: 0 !important ;
 }
 
-.card-img{
-    object-fit: cover;
-}
 .carousel-item .card{
     position: relative !important;
     border-radius: 25px;
-    overflow: hidden !important;   
-    padding: 0px !important;
-
+    overflow: hidden;
 }
-
-.card{
-    overflow: hidden !important;   
-
-}
-
 .fav-card{
     position: absolute;
     right: 7px;
@@ -248,6 +215,21 @@ h1{
     left: 0 !important;
     padding-block: 10px !important;
 }
+
+
+
+
+
+
+.liked {
+    color: red;
+}
+
+
+.card{
+    cursor: pointer;
+}
+
 
 #movieModal .modal-dialog {
     max-width: 500px; /* Restrict the maximum width */

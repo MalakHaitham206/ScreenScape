@@ -5,8 +5,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
+  background-size: cover;
   color: white;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcomeBody {
+  background-image: url("/resources/login_and_register_images/login_screen_background.png");
+  font-family: "Poppins", sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +153,8 @@ form label {
   box-shadow: 0px 0px 8px rgba(171, 98, 245, 0.8);
 }
 
-#submitButton {
+#submitButton,
+#submitEmailButtonUpdate {
   background-color: #6c1cbc;
   border: none;
   margin-bottom: 20px;
@@ -153,7 +166,8 @@ form label {
   color: white;
   font-size: 1rem;
 }
-#submitButton:hover {
+#submitButton:hover,
+#submitEmailButtonUpdate {
   background: linear-gradient(to bottom, #9055c3 4%, #7845b3 40%, #7845b3 56%);
   background-color: transparent;
   box-shadow: 0px 0px 8px rgba(171, 98, 245, 0.8);

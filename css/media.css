@@ -1,0 +1,9 @@
+@media screen and (max-width:991px) {
+    .side-bar{
+        display:none !important;
+    }
+    .main{
+        width:100% !important;
+        margin-left: 0;
+    }
+}
