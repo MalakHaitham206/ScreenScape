@@ -241,3 +241,42 @@ button.btn-google img {
   text-align: left;
   color: #ffffff70;
 }
+@media (max-width: 1050px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    margin: 5% 0;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1; 
+    height: auto;
+    padding: 20px;
+  }
+
+  .left-section {
+    text-align: center; 
+  }
+
+  .right-section {
+    padding: 20px;
+  }
+  label {
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .left-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .left-section p {
+    font-size: 1rem;
+  }
+
+  #signupParagraph {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
