@@ -241,22 +241,23 @@ button.btn-google img {
   text-align: left;
   color: #ffffff70;
 }
-@media (max-width: 1050px) {
+@media (max-height: 500px) {
   .login-container {
     flex-direction: column;
     height: auto;
     margin: 5% 0;
+    width: 80%;
   }
 
   .left-section,
   .right-section {
-    flex: 1; 
+    flex: 1;
     height: auto;
     padding: 20px;
   }
 
   .left-section {
-    text-align: center; 
+    text-align: center;
   }
 
   .right-section {
