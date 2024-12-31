@@ -1,6 +1,8 @@
-import { signOut } from "firebase/auth";
-import { auth } from "./firebase/firebaseConfig";
 
+import {
+  auth,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 const logOut = async () => {
   try {
     await signOut(auth);
@@ -10,3 +12,4 @@ const logOut = async () => {
   }
 };
 
+document.getElementById("logoutButton").addEventListener("click", logOut);

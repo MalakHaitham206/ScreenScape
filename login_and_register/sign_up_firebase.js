@@ -5,6 +5,14 @@ import {
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
+// Initialize Notyf instance with top-right position
+var notyf = new Notyf({
+  position: {
+    x: "right",
+    y: "top",
+  },
+});
+
 // Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBT5bGRtabhLZwreiU4UWkgtnvAAehc4nc",
@@ -25,7 +33,7 @@ const signUp = async (email, password) => {
       email,
       password
     );
-    console.log("User signed up:", userCredential.user);
+    notyf.success("login successfully");
   } catch (error) {
     console.error("Error signing up:", error.message);
   }
@@ -36,29 +44,42 @@ document
   .addEventListener("click", async function (event) {
     event.preventDefault(); // Prevent form submission
 
+    const submitButton = document.getElementById("submitButton");
     const email = document.getElementById("emailInput").value;
     const password = document.getElementById("passwordInput").value;
     const repassword = document.getElementById("rePasswordInput").value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^[A-Za-z\d@$!%*?&]{6,}$/;
+    const originalContent = submitButton.innerHTML;
+    submitButton.innerHTML =
+      '<img src="../resources/login_and_register_images/loading.svg" style="height: 20px;">';
+    submitButton.disabled = true;
+    try {
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
 
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+      if (!passwordRegex.test(password)) {
+        alert(
+          "Password must be at least 8 characters long and include uppercase, lowercase, a number, and a special character."
+        );
+        return;
+      }
+      console.log("Password:", password);
+      console.log("Re-Password:", repassword);
 
-    if (!passwordRegex.test(password)) {
-      alert(
-        "Password must be at least 8 characters long and include uppercase, lowercase, a number, and a special character."
-      );
-      return;
-    }
-    console.log("Password:", password);
-    console.log("Re-Password:", repassword);
+      if (password !== repassword) {
+        alert("Your passwords do not match.");
+        return;
+      }
 
-    if (password !== repassword) {
-      alert("Your passwords do not match.");
-      return;
+      await signUp(email, password);
+    } catch (error) {
+      console.error("Sign-up process failed:", error);
+    } finally {
+      // Restore the original button content and enable it
+      submitButton.innerHTML = originalContent;
+      submitButton.disabled = false;
     }
-    await signUp(email, password);
   });
